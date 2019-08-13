@@ -1,0 +1,3222 @@
+/***********************************************/
+/*************** GENERAL STYLES ****************/
+/***********************************************/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************* START: HOME PAGE *******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+/****************************************************************/
+/*************** START: HEADER SECTION HOME PAGE ****************/
+/****************************************************************/
+
+/** Navigation **/
+
+.navigation {
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+}
+
+
+.header .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    color: #fff;
+    font-size: 26px;
+    z-index: 999;
+}
+
+.header .navigation h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/** Nav Menu **/
+
+.header .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.header .navigation ul li {
+    float: left;
+}
+
+.header .navigation ul li a:link,
+.header .navigation ul li a:visited {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.header .navigation ul li a:hover,
+.header .navigation ul li a:active {
+    color: #2ecc71;
+}
+
+/** Drop Down Menu On Hover **/
+
+.header .navigation ul li.dropDown {
+    position: relative;
+} 
+
+.header .navigation ul li .services-dropDown-content {
+   position: absolute;
+   display: none; 
+}
+
+.header .navigation ul li .services-dropDown-content li {
+   width: 225px;
+   float: none;
+}
+
+
+.header .navigation ul li .services-dropDown-content a:link, 
+.header .navigation ul li .services-dropDown-content a:visited {
+    display: block;
+    font-weight: bold;
+    text-align: left;
+    padding: 15px  10px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid transparent;
+}
+
+.header .navigation ul li .services-dropDown-content a:hover, 
+.header .navigation ul li .services-dropDown-content a:active {
+    background-color: #fff;
+    color: #2ecc71;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+.header .navigation ul li.dropDown:hover  .services-dropDown-content {
+    display: block;
+}
+
+.header .navigation ul li.dropDown:hover  .dropDownButton {
+    color: #2ecc71;
+}
+
+
+/** StickyNav with jQuery**/
+
+.is-sticky .navigation {
+    background-color:  #fff;
+    width: 100%;
+    border-bottom: 1px solid #b5b2b2;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    z-index: 9999;
+}
+
+.is-sticky .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    font-size: 26px;
+    color: #2ecc71;
+}
+
+.is-sticky .navigation h1 a {
+    color: #2ecc71;
+}
+
+.is-sticky .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.is-sticky .navigation ul li {
+    float: left;
+}
+
+.is-sticky .navigation nav ul a:link, 
+.is-sticky .navigation  nav ul a:visited  {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #2ecc71;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.is-sticky .navigation nav ul a:hover, 
+.is-sticky .navigation nav ul a:active {
+    color: #000; 
+}
+
+.is-sticky .navigation nav ul a.active {
+    background-color: #2ecc71;
+    color: #fff; 
+}
+
+.is-sticky .navigation nav ul li.dropDown:hover  .dropDownButton {
+    background-color: #2ecc71;
+    color: #fff;
+}
+
+/** Mobile Nav Menu - Icon **/
+
+.mobileNavIcon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -6px) ;
+    transform: rotate(45deg) translate(-7px, -6px) ;
+}
+
+.is-sticky .navigation .mobileNavIcon .bar1,
+.is-sticky .navigation .mobileNavIcon .bar2,
+.is-sticky .navigation .mobileNavIcon .bar3 {
+    background-color: #2ecc71;
+}
+
+/** Sub - Menu Arrow Icon **/
+
+.header .navigation nav ul li.dropDown .sidebar-menu-arrow {
+    display: none;
+}
+   
+
+/** BG Slides **/
+
+.header #home {
+    z-index: 1;
+	position: relative;
+    height: 750px;
+}
+
+.header .slides {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .slides .slide1 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-keyson-dental-clinic.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-keyson-dental-clinic.jpg);
+    background-position: top center;
+}
+
+.header .slides .slide2 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-giving-people-smile.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-giving-people-smile.jpg);
+    background-position: center;
+}
+
+.header .slides .slide3 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-creating-smiles.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-creating-smiles.jpg);
+    background-position: top center;
+}
+
+.header .slides .slide4 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/bg-look-great.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/bg-look-great.jpg);
+    background-position:  top center;
+}
+
+.header .slides .slide1,
+.header .slides .slide2,
+.header .slides .slide3,
+.header .slides .slide4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+
+/** Header Subtitle ***/
+
+.header .title {
+    font-size: 51px;
+    color: #fff;
+    width: 100%;
+    padding: 200px 10px  0;
+    background-color: transparent;
+}
+
+.header .details {
+    font-size: 40px;
+    padding: 0 10px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/** Button Area **/
+
+.header .buttons {
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+.header .buttons a:link,
+.header .buttons a:visited {
+    border: 2px solid #fff;
+    padding: 10px  16px;
+    font-weight: bold;
+    color: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+.header .buttons a.whatWeDo:link,
+.header .buttons a.whatWeDo:visited {
+    background-color: #2ecc71;
+    border: 2px solid #2ecc71;
+}
+
+
+
+.header .buttons a:hover,
+.header .buttons a:active {
+	color: #2ecc71;
+    background-color: white;
+}
+
+.header .buttons a.whatWeDo:hover,
+.header .buttons a.whatWeDo:active {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1300px) {
+    .header .navigation ul li .services-dropDown-content {
+        right: 0;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .header .slides .slide1,
+    .header .slides .slide2,
+    .header .slides .slide3,
+    .header .slides .slide4 {
+        height: 500px;
+    } 
+    
+    .header .title,
+    .header .details,
+    .header .buttons {
+        text-align: center;
+    }
+    
+    .header .title {
+        font-size: 41px;
+        width: 100%;
+        margin-top: 136px;
+        padding: 0 10px;
+    }
+
+    .header .details {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    /** Mobile Navigation **/
+
+    .mobileNavIcon {
+        display: block;    
+    }  
+
+    .navigation {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header .navigation h1 {
+        color: #fff;
+    }
+
+    
+    .header .navigation h1 {
+        font-size: 18px;
+        float: none;
+    }
+    
+    .header .navigation ul {
+        float: none;
+        display: none;
+        background-color: #2ecc71;
+    }
+    
+    .header .navigation ul li {
+       float: none;
+    }
+
+    .header .navigation ul li a:hover,
+    .header .navigation ul li a:active {
+        color: #000;
+    }
+    
+    .header .navigation nav ul a.active {
+        color: #000; 
+    }
+    
+    .is-sticky .navigation h1 {
+        color: #2ecc71;
+    }
+
+    
+    .is-sticky .navigation ul {
+        background-color: #2ecc71;
+    }
+    
+    .is-sticky .navigation nav ul a:link, 
+    .is-sticky .navigation  nav ul a:visited  {
+        color: #fff;
+    }
+
+    .is-sticky .navigation nav ul a:hover, 
+    .is-sticky .navigation nav ul a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation nav ul a.active {
+        color: #000; 
+    }
+    
+    /** Drop Down Menu On Hover **/
+    
+    .header .navigation nav ul li.dropDown:hover  .dropDownButton {
+       color: #000;
+    }
+    
+    .header .navigation ul li.dropDown:hover  .services-dropDown-content {
+        display: none;
+    }
+    
+    .header .navigation nav ul li.dropDown .sidebar-menu-arrow {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+   .header .navigation ul li .services-dropDown-content {
+      position: static;
+       width: 100%;
+    }
+
+   .header .navigation ul li .services-dropDown-content li {
+       width: 100%;
+    }
+    
+    .header .navigation ul li .services-dropDown-content a:link, 
+    .header .navigation ul li .services-dropDown-content a:visited {
+        text-align: center;
+        padding: 15px  10px;
+        font-weight: normal;
+    }
+    
+    /** Header Background Images **/
+    
+    .header .slides .slide1 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/small-bg-keyson-dental-clinic.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/small-bg-keyson-dental-clinic.jpg);
+    }
+
+    .header .slides .slide2 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/small-bg-giving-people-smile.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/small-bg-giving-people-smile.jpg);
+    }
+
+    .header .slides .slide3 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/small-bg-creating-smiles.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/small-bg-creating-smiles.jpg);
+    }
+
+    .header .slides .slide4 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/home/small-bg-look-great.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/home/small-bg-look-great.jpg);
+    }
+    
+    /** Header - Details **/
+    
+    .header .title {
+        font-size: 31px;
+    }
+
+    .header .details {
+        font-size: 25px;
+    }
+    
+    .header .buttons {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+   
+    .header .title {
+        margin-top: 176px;
+    } 
+
+}
+
+
+@media only screen and (max-width: 360px) {
+    .header .navigation h1 {
+        font-size: 16px;
+    }
+    
+    .header .title {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 116px;
+    }
+
+    .header .details {
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .header .buttons {
+        margin-top: 30px;
+    }
+    
+    .header .buttons a {
+        padding: 10px  16px;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    } 
+}
+
+/****************************************************************/
+/*************** END: HEADER SECTION - HOME PAGE ****************/
+/****************************************************************/
+
+
+
+
+
+/*****************************************************************/
+/************** START: WELCOME SECTION - HOME PAGE ***************/
+/*****************************************************************/
+.welcomeToKeyson {
+    margin-top: 660px;
+    margin-bottom: 79px;
+}
+
+.welcomeToKeyson  .container {
+    padding: 71px   10px   0;
+    text-align: center;
+}
+
+.welcomeToKeyson div {
+    float: left;
+}
+
+
+.welcomeToKeyson .welcomeToOurClinic {
+   width: 50%;
+   height: auto;
+   padding: 0   10px;
+   line-height: 140%;
+}
+
+.welcomeToKeyson .welcomeImage {
+   padding: 0   10px;
+   width: 50%; 
+}
+
+.welcomeToKeyson .welcomeImage img {
+   max-width: 100%;
+}
+
+/** Welcome Title **/
+
+.welcomeToKeyson .welcomeToOurClinic .title {
+   font-size: 30px;
+}
+
+.welcomeToKeyson .welcomeToOurClinic .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2ecc71;
+   margin-top: 16px;
+}
+
+.welcomeToKeyson .welcomeToOurClinic h2 {
+    margin-bottom: 28px; 
+}
+
+/** Welcome Description **/
+
+.welcomeToKeyson .welcomeToOurClinic p {
+    font-size: 16px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE WELCOME SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .welcomeToKeyson {
+        margin-top: 510px;
+        margin-bottom: 79px;
+    }
+    
+    .welcomeToKeyson  div {
+         float: none;
+     }
+    
+    .welcomeToKeyson .welcomeToOurClinic {
+         text-align: center;
+         width: 100%;
+         margin-bottom: 20px;
+    }
+
+    .welcomeToKeyson .welcomeImage {
+      width: 100%; 
+    }
+    
+    .welcomeToKeyson .welcomeToOurClinic .title:after {
+       margin: 0 auto;
+       margin-top: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .welcomeToKeyson {
+         margin-top: 530px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+    
+     .welcomeToKeyson .welcomeToOurClinic .title {
+       font-size: 25px;
+     }
+
+     .welcomeToKeyson .welcomeToOurClinic .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+}
+
+
+
+/***************************************************************/
+/************** END: WELCOME SECTION - HOME PAGE ***************/
+/***************************************************************/
+
+
+
+
+
+/******************************************************************/
+/************ START: WHY CHOOSE US SECTION - HOME PAGE ************/
+/******************************************************************/
+
+.whyChooseUs {
+   background-color: #2ecc71;
+   color: #fff;
+}
+
+.whyChooseUs  .container {
+    padding: 71px   10px   0;
+    text-align: center; 
+
+}
+
+.whyChooseUs  #whyChooseUs {
+    padding: 0   10px;
+}
+
+
+/** Why Choose Us Introduction **/
+
+.whyChooseUs .title {
+   font-size: 30px;
+}
+
+.whyChooseUs .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #fff;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+
+.whyChooseUs p {
+    font-size: 16px;
+}
+
+
+
+/** why Choose Us **/
+
+.whyChooseUs h2 {
+    margin-bottom: 28px; 
+}
+
+.whyChooseUs #experience {
+    background-image: url(../images/icons/experience.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.whyChooseUs #schedule {
+    background-image: url(../images/icons/schedule.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.whyChooseUs #bestPrices {
+    background-image: url(../images/icons/best-prices.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+    line-height: 140%;
+}
+
+.whyChooseUs .row h2 {
+    font-size: 20px;
+}
+
+.whyChooseUs .row p{
+    font-size: 16px;
+    margin-bottom: 58px;
+}
+
+/*************** MEDIA QUERIES FOR THE WHY CHOOSE US SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1000px) {
+    .whyChooseUs p, .services .row p, .services .row h2{
+    font-size: 16px;
+    }
+   
+}
+
+@media only screen and (max-width: 800px) {
+    .whyChooseUs .row {
+      width: 100%;
+    }
+    
+    .whyChooseUs .row h2 {
+    font-size: 22px;
+    }
+    
+    .whyChooseUs p,.services .row p{
+    font-size: 16px;
+    } 
+    
+    .whyChooseUs .col {
+        float:none;
+        margin: 1% 0 1%;
+    }
+    
+}
+
+@media only screen and (max-width: 480px) {
+     .whyChooseUs .title {
+       font-size: 25px;
+     }
+
+     .whyChooseUs .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+    
+}
+
+/***********************************************************************/
+/*************** END: WHY CHOOSE US SECTION - HOME PAGE ****************/
+/***********************************************************************/
+
+
+
+
+
+
+
+/******************************************************************/
+/************** START: SERVICES SECTION - HOME PAGE ***************/
+/******************************************************************/
+
+.services .container {
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+
+/** Services Introduction **/
+
+.services .title {
+   font-size: 30px;
+}
+
+.services  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2ecc71;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.services h2  {
+    margin-bottom: 28px;
+}
+
+.services p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+/** Our Services **/
+
+.ourServices {
+    margin-top: 28px;
+}
+
+.services ul.ourServices  {
+    list-style-type: none;
+}
+
+.services ul.ourServices img {
+     width: 100%;
+     
+}
+
+/** Images Overlay **/
+
+.services .ourServices a {
+    text-decoration: none;
+}
+
+.services .ourServices p span {
+    font-weight: bold;
+}
+
+.services .ourServices .caption {
+    position: relative;
+}
+
+.services .ourServices .photo_Overlay {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(46, 204, 113, 0.8);
+    padding: 20px  20px;
+    margin: 0 25%;
+    bottom: 34%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 50%;
+    opacity: 0;
+    
+}
+
+.services .ourServices .caption:hover .photo_Overlay {
+    opacity: 1;
+}
+
+
+.services .description p {
+    margin-top: 15px;
+    font-size:  22px;
+    font-weight: bold;
+    text-align: left;
+    color: #000;
+}
+
+/** View All Services **/
+
+.services .allServices a:link,
+.services .allServices a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2ecc71;
+    border: 3px solid #2ecc71;
+    font-size: 22px;
+    padding: 20px 25px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+}
+
+.services .allServices a:hover,
+.services .allServices a:active {
+	background-color: #fff;
+    color: #319d5e;
+    border: 3px solid #319d5e;
+}
+
+
+/*************** MEDIA QUERIES FOR THE SERVICES SECTION - HOME PAGE ****************/
+
+
+@media only screen and (max-width: 800px) {
+    .services .description p {
+        font-size: 18px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .services .servicesWeOffer {
+        width: 100%;
+    } 
+    
+    .services .col  {
+        margin: 0;
+    }
+    
+    .services .ourServices .description p {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .services .title {
+       font-size: 25px;
+     }
+
+    .services .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .services .description p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .services #allServices {
+        font-size: 18px;
+        padding: 30px 10px 0;
+    }
+    
+    .services #allServices a {
+        font-size: 18px;
+        padding: 15px 10px;
+    }
+}
+
+
+
+/****************************************************************/
+/************** END: SERVICES SECTION - HOME PAGE ***************/
+/****************************************************************/
+
+
+
+
+
+/**********************************************************************/
+/************** START: TESTIMONIALS SECTION - HOME PAGE ***************/
+/**********************************************************************/
+
+
+.clientTestimonials {
+    background-color: #2980b9;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/testimonials/bg-client-testimonials.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/testimonials/bg-client-testimonials.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    height: auto;
+    color:#fff;
+    margin-top: 67px;
+}
+
+.clientTestimonials img {
+    width: 30%;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+/** Testimonials Introduction **/
+
+.testimonials .title {
+   font-size: 30px;
+}
+
+.testimonials  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2980b9;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.testimonials h2 {
+    margin-bottom: 28px;
+   
+}
+
+.testimonials p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/** Client Testimonials **/
+
+.testimonials .wrapper .client{
+    padding: 8%  30% 0;
+    text-align: center;
+}
+
+/** Client Quotes **/
+
+.testimonials .wrapper .quotes{
+    padding: 191px   10px   0;
+    padding: 5% 200px 10%;
+    text-align: center;
+}
+
+/*************** MEDIA QUERIES FOR THE TESTIMONIALS SECTION - HOME PAGE ****************/
+
+
+@media only screen and (max-width: 1000px) {
+    
+    .testimonials .container {
+    padding: 71px  10px 0 ;
+   
+    }
+   
+    .clientTestimonials img {
+       width: 35%;
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 5% 100px 10%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 800px) {
+    
+    
+    .clientTestimonials {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/testimonials/small-bg-client-testimonials.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/testimonials/small-bg-client-testimonials.jpg);
+    }
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 10%  30% 0;
+   
+    }
+    
+    .clientTestimonials img {
+       width: 40%;
+    }
+    .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 5% 50px 10%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  30% 0;
+   
+    }
+    
+    .clientTestimonials img {
+       width: 60%;
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  20% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+/********************************************************************/
+/************** END: TESTIMONIALS SECTION - HOME PAGE ***************/
+/********************************************************************/
+
+
+
+
+
+
+/*************************************************************************/
+/************** START: WE CAN HELP YOU SECTION - HOME PAGE ***************/
+/*************************************************************************/
+.weCanHelpYou {
+    background-color: #2ecc71;
+}
+
+.weCanHelpYou  .container {
+    padding: 71px   10px   0;
+}
+
+/** We Can Help You Title **/
+
+.ourHelp  .howWeCanHelp .title {
+   font-size: 30px;
+}
+
+.ourHelp  .howWeCanHelp .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #fff;
+   margin-top: 16px;
+}
+
+.ourHelp .howWeCanHelp h2 {
+    margin-bottom: 28px; 
+}
+
+/** How We Can Help You Description **/
+
+.ourHelp .howWeCanHelp {
+    color: #fff;
+    padding-bottom: 71px;
+}
+
+.ourHelp  .howWeCanHelp p {
+    font-size: 22px;
+    line-height: 140%;
+}
+
+/** Book An Appointement **/
+
+.ourHelp .bookAnAppointement a:link, 
+.ourHelp .bookAnAppointement a:visited {
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight:bold;
+    color: #2ecc71;
+    background-color: #fff;
+    border: 2px solid #fff;
+    padding: 20px 0;
+    display: block;
+    width: 50%;
+    margin: 43px 0 43px 50%;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+}
+
+.ourHelp .bookAnAppointement a:hover, 
+.ourHelp .bookAnAppointement a:active {
+    background-color: #2ecc71;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE WELCOME SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .ourHelp   div {
+         float: none;
+     }
+    
+    .ourHelp  .howWeCanHelp {
+         text-align: center;
+         width: 100%;
+         padding-bottom: 61px;
+    }
+    
+   .ourHelp  .howWeCanHelp .title:after {
+       margin: 0 auto;
+       margin-top: 16px;
+    }
+    
+   .ourHelp .bookAnAppointement a:link, 
+   .ourHelp .bookAnAppointement a:visited {
+        padding: 20px 0;
+        display: block;
+        width: 32%;
+        margin: 0 34% 71px;
+    }
+    
+    .ourHelp .bookAnAppointement  {
+        width: 100%;
+    }
+    
+    .ourHelp .bookAnAppointement.col {
+		margin: 0; 
+	}
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .ourHelp  .howWeCanHelp p {
+        font-size: 18px;
+    }
+    
+    .ourHelp .bookAnAppointement a:link, 
+    .ourHelp .bookAnAppointement a:visited {
+        width: 40%;
+        margin: 0 30% 71px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .ourHelp  .howWeCanHelp .title {
+       font-size: 25px;
+     }
+
+     .ourHelp  .howWeCanHelp .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+    
+     .ourHelp .bookAnAppointement a:link, 
+     .ourHelp .bookAnAppointement a:visited {
+        width: 60%;
+        margin: 0 20% 71px;
+     }
+}
+
+@media only screen and (max-width: 320px) {
+     .ourHelp .bookAnAppointement a:link, 
+     .ourHelp .bookAnAppointement a:visited {
+        width: 80%;
+        margin: 0 10% 71px;
+     }
+}
+
+/**********************************************************************/
+/************** END: WE CAN HELP YOU SECTION - HOME PAGE **************/
+/**********************************************************************/
+
+
+
+
+
+
+/******************************************************************/
+/*************** START: FOOTER SECTION - HOME PAGE ****************/
+/******************************************************************/
+
+.footer .container .copyright {
+    text-align: left;
+    padding: 56px 10px;
+}
+
+.footer .container .socialMedia {
+    text-align: left;
+    padding: 47px 0;
+}
+
+.footer .container .copyright a {
+    font-weight: bold;
+    text-decoration: none;
+    color:  #319d5e;
+}
+
+/** Social Media Icons **/
+
+.footer ul {
+    list-style-type: none;
+    float: right;
+}
+
+.footer ul li {
+    float: left;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    float: left;
+    margin: 0 10px;
+    padding: 9px 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid  #2ecc71;
+    background-color: #2ecc71;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.footer ul li a:hover {
+    background-color: #fff;
+    color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+
+/** Scroll To Top **/
+
+.scroll-to-top {
+     right:20px;
+     bottom:20px;
+     font-size: 25px;
+     padding: 5px 15px 10px;
+     background-color: #2ecc71;
+     color: #fff;
+     border: 1px solid #fff;
+     position:fixed;
+     text-decoration: none; 
+     -webkit-transition: .3s; 
+     transition: .3s;
+     display: none;
+}
+
+.scroll-to-top:hover {  
+     background-color: #017432;
+}
+
+/*************** MEDIA QUERIES FOR THE FOOTER SECTION - HOME PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .footer .container .copyright, .footer .container .socialMedia{
+        text-align: center;
+        width: 100%;
+     }
+    
+    .footer ul {
+        float: none;
+    }
+    
+     .footer ul li {
+        text-align: center;
+        float: none;
+        display: inline-block;
+    }
+    
+    .footer .container .copyright {
+        padding: 56px 10px 10px;
+    }
+
+    .footer .container .socialMedia {
+        padding: 0  0  47px;
+    }
+    
+    .footer .col {
+        margin: 0;
+    }
+    
+   
+}
+
+
+/******************************************************************/
+/*************** END: FOOTER SECTION - HOME PAGE ******************/
+/******************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************** END: HOME PAGE ********************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ START: ABOUT PAGE *******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/**********************************************************************/
+/*************** START: HEADER SECTION - ABOUT PAGE *******************/
+/**********************************************************************/
+
+.header .bgAboutImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/bg-about-us.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/bg-about-us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+    height: 500px;
+}
+
+#headerAbout {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+.header  .bgAboutImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .aboutTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .aboutDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+    
+    .header .bgAboutImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/small-bg-about-us.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/small-bg-about-us.jpg);
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .header .aboutTitle {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .aboutDetails {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/*******************************************************************/
+/*************** END: HEADER SECTION - ABOUT PAGE ******************/
+/*******************************************************************/
+
+
+/**********************************************************************/
+/************** START: WHO WE ARE SECTION - ABOUT PAGE  ***************/
+/**********************************************************************/
+.aboutUs {
+    margin-top: 79px;
+    margin-bottom: 79px;
+}
+
+.aboutUs  .container {
+    padding: 71px   10px   0;
+    text-align: center;
+}
+
+.aboutUs div {
+    float: left;
+}
+
+
+.aboutUs .whoWeAre  {
+   width: 50%;
+   height: auto;
+   padding: 0   10px;
+   line-height: 140%;
+}
+
+.aboutUs .welcomeImage {
+   padding: 0   10px;
+   width: 50%; 
+}
+
+.aboutUs .welcomeImage img {
+   max-width: 100%;
+}
+
+/** Who We Are Title **/
+
+.aboutUs .whoWeAre  .title {
+   font-size: 30px;
+}
+
+.aboutUs .whoWeAre  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2ecc71;
+   margin-top: 16px;
+}
+
+.aboutUs .whoWeAre  h2 {
+    margin-bottom: 28px; 
+}
+
+/** Who We Are Description **/
+
+.aboutUs .whoWeAre  p {
+    font-size: 16px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE WHO ARE SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+     .aboutUs  div {
+         float: none;
+     }
+    
+    .aboutUs .whoWeAre  {
+         text-align: center;
+         width: 100%;
+         margin-bottom: 20px;
+    }
+
+    .aboutUs .welcomeImage {
+      width: 100%; 
+    }
+    
+    .aboutUs .whoWeAre  .title:after {
+       margin: 0 auto;
+       margin-top: 16px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+     .aboutUs .whoWeAre  .title {
+       font-size: 25px;
+     }
+
+     .aboutUs .whoWeAre  .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+}
+
+
+/*******************************************************************/
+/************** END: WHO WE ARE SECTION - ABOUT PAGE ***************/
+/*******************************************************************/
+
+
+/***************************************************************************/
+/**************** START: WE ARE GREAT SECTION  - ABOUT PAGE ****************/
+/***************************************************************************/
+
+.weAreGreat {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/about/our-dental-clinic-2.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/about/our-dental-clinic-2.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: left center;
+   height: 325px;
+   color: #fff;
+   margin-top: 52px;
+}
+
+
+.weAreGreat .container p {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 115px   10px 100px;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 150%;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE WE AREA GREAT SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .weAreGreat .container p {
+     width: 90%;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .weAreGreat .container p {
+     width: 100%;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   
+   .weAreGreat .container p {
+     width: 100%;
+     padding: 100px   10px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+    .weAreGreat .container p {
+     width: 100%;
+     padding: 100px   10px;
+     font-size: 18px;
+   }
+}
+
+/************************************************************************/
+/**************** END:WE ARE GREAT SECTION - ABOUT PAGE *****************/
+/************************************************************************/
+
+
+/************************************************************************/
+/******************* START:TEAM SECTION - ABOUT PAGE ********************/
+/************************************************************************/
+
+.team .container {
+    padding: 71px   10px   0;
+    text-align: center; 
+}
+
+
+/** Team Introduction **/
+
+.team .title {
+   font-size: 30px;
+}
+
+.team  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2ecc71;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.team h2  {
+    margin-bottom: 28px;
+}
+
+.team p {
+    font-size: 16px;
+    line-height: 140%;
+}
+
+#teamSection {
+    margin-bottom: 51px;
+}
+
+/** Our Team **/
+
+.ourteam1 {
+    margin-top: 28px;
+}
+
+.team  ul .teamMember {
+    margin-bottom: 30px;
+}
+
+
+.team ul.ourteam1, 
+.team ul.ourteam2 {
+    list-style-type: none;
+}
+
+.team ul.ourteam1 img,
+.team ul.ourteam2 img {
+     width: 100%;
+     
+}
+
+/** Images Overlay **/
+
+.team .ourteam1 a, 
+.team .ourteam2 a {
+    text-decoration: none;
+}
+
+.team .ourteam1 p span, 
+.team .ourteam2 p span {
+    font-weight: bold;
+}
+
+.team .ourteam1 .caption, 
+.team .ourteam2 .caption {
+    position: relative;
+}
+
+.team .ourteam1 .photo_Overlay, 
+.team .ourteam2 .photo_Overlay {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(46, 204, 113, 0.8);
+    padding: 20px  20px;
+    margin: 0 25%;
+    bottom: 40%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 50%;
+    opacity: 0;
+}
+
+.team .ourteam1 .caption:hover .photo_Overlay, 
+.team .ourteam2 .caption:hover .photo_Overlay {
+    opacity: 1;
+}
+
+.team  .description p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+}
+
+.team  .description p span {
+    color: #319d5e;
+}
+
+/** POPUP - TEAM MEMBER READ MORE CONTENT  **/
+
+.lity-popup {
+  background: #fff;
+  max-width: 600px; 
+}
+
+.lity-popup img {
+    width: 100%;
+}
+
+
+.lity-popup P {
+   padding: 20px;
+   font-size: 16px;
+   line-height: 150%;
+}
+
+
+/*************** MEDIA QUERIES FOR THE TEAM SECTION - ABOUT PAGE ****************/
+
+@media only screen and (max-width: 800px) {
+    .team .teamMember {
+        width: 100%;
+    } 
+    
+    .team .ourteam1 .col,  
+    .team .ourteam2 .col  {
+        margin: 0  0  30px;
+    }
+    
+    .team ul.ourteam1 li, 
+    .team ul.ourteam2 li {
+         padding: 0 160px;
+    }
+    
+    .team ul.ourteam1 img,
+    .team ul.ourteam2 img {
+         width: 100%; 
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .team ul.ourteam1 li, 
+    .team ul.ourteam2 li {
+         padding: 0 80px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .team .title {
+       font-size: 25px;
+     }
+
+    .team .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .team ul.ourteam1 li, 
+    .team ul.ourteam2 li {
+         padding: 0;
+    }
+    
+    .team .description p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+}
+
+/*************************************************************************/
+/******************* END: TEAM SECTION - ABOUT PAGE **********************/
+/*************************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************* END: ABOUT PAGE ********************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/********************************************** START: SERVICES PAGE ******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+/**********************************************************************/
+/*************** START: HEADER SECTION - SERVICES PAGE ****************/
+/**********************************************************************/
+
+.header .bgServicesImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/dental-services/bg-dental-services.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/dental-services/bg-dental-services.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+    height:500px;
+}
+
+#headerServices {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+.header .bgServicesImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+/** Header Subtitle ***/
+
+.header .servicesTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .servicesDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 768px) {
+    
+    .header .bgServicesImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/dental-services/small-bg-dental-services.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/dental-services/small-bg-dental-services.jpg);
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .header .servicesTitle {
+    font-size: 41px;
+    width: 100%;
+    padding: 230px 10px 10px;
+    }
+
+    .header .servicesDetails {
+    font-size: 30px;
+    padding: 0 10px;
+    }
+}
+
+/*******************************************************************/
+/*************** END: HEADER SECTION - SEVICES PAGE ****************/
+/*******************************************************************/
+
+/****************************************************************************/
+/*************** START: OUR SERVICES SECTION - SERVICES PAGE ****************/
+/****************************************************************************/
+
+#servicesSection {
+    margin-bottom: 51px;
+}
+
+/** Our Services **/
+
+.ourServices1 {
+    margin-top: 28px;
+    margin-bottom: 530px;
+}
+
+.services ul.ourServices1, 
+.services ul.ourServices2 {
+    list-style-type: none;
+}
+
+.services ul.ourServices1 img,
+.services ul.ourServices2 img {
+     width: 100%;
+     
+}
+
+/** Images Overlay **/
+
+.services .ourServices1 a, 
+.services .ourServices2 a {
+    text-decoration: none;
+}
+
+.services .ourServices1 p span, 
+.services .ourServices2 p span {
+    font-weight: bold;
+}
+
+.services .ourServices1 .caption, 
+.services .ourServices2 .caption {
+    position: relative;
+}
+
+.services .ourServices1 .photo_Overlay, 
+.services .ourServices2 .photo_Overlay {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(46, 204, 113, 0.8);
+    padding: 20px  20px;
+    margin: 0 25%;
+    bottom: 50%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 50%;
+    opacity: 0;
+}
+
+.services .ourServices1 .caption:hover .photo_Overlay, 
+.services .ourServices2 .caption:hover .photo_Overlay {
+    opacity: 1;
+}
+
+#servicesSection p.moreDescription {
+    margin-top: 10px;
+    font-size:  16px;
+    font-weight: normal;
+    text-align: left;
+    color: #000;
+}
+
+
+
+/*************** MEDIA QUERIES FOR THE OUR SERVICES SECTION - SERVICES PAGE ****************/
+
+@media only screen and (max-width: 1024px) {
+    .services .ourServices1 .photo_Overlay, 
+    .services .ourServices2 .photo_Overlay {
+        bottom: 60%; 
+    }
+    
+    .services .ourServices2 .photo_Overlay {
+        bottom: 55%; 
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+    
+    .services .servicesWeOffer1 {
+        width: 100%;
+    } 
+    
+    .services .ourServices1 .col,  
+    .services .ourServices2 .col  {
+        margin: 0  0  30px;
+    }
+    
+    .services .ourServices1 .photo_Overlay,
+    .services .ourServices2 .photo_Overlay {
+        bottom: 30%; 
+    }
+    
+    .services ul.ourServices1 img,
+    .services ul.ourServices2 img {
+         width: 100%;
+         padding: 0 80px;
+    }
+    
+    #servicesSection p,
+    #servicesSection p.moreDescription {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #servicesSection p.moreDescription {
+        font-size:  16px;
+    }
+    
+    .services ul.ourServices1 img,
+    .services ul.ourServices2 img {
+         width: 100%;
+         padding: 0;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .services .ourServices1 .photo_Overlay,
+    .services .ourServices2 .photo_Overlay {
+        bottom: 50%; 
+    }
+}
+
+@media only screen and (max-width: 320px) {
+        
+    .services .ourServices1 .photo_Overlay {
+        bottom: 60%; 
+    }
+    
+    .services .ourServices2 .photo_Overlay {
+        bottom: 55%; 
+    }
+}
+
+
+/****************************************************************************/
+/*************** END: OUR SERVICES SECTION - SERVICES PAGE ******************/
+/****************************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ END: SERVICES PAGE ******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/********************************************** START: SERVICES PAGE PART 2 ***********************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/****************************************************************************************************************************************/
+/***** START: HEADER SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE *****/
+/****************************************************************************************************************************************/
+
+.header .bgCosmeticImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/bg-cosmetic-dentistry.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/bg-cosmetic-dentistry.jpg);
+    background-position: 50% 70%;
+}
+
+.header .bgPreventiveImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/bg-preventive-dentistry.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/bg-preventive-dentistry.jpg);
+    background-position: 50%  1%;
+}
+
+.header .bgOrthodonticsImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/bg-orthodontics.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/bg-orthodontics.jpg);
+    background-position: 50%  1%;
+}
+
+.header .bgPediatricImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/dental-services/bg-pediatric-dentistry.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/dental-services/bg-pediatric-dentistry.jpg);
+    background-position: 50%  25%;
+}
+
+.header .bgPeriodonticImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/bg-periodontics.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/bg-periodontics.jpg);
+    background-position: 50%  10%;
+}
+
+.header .bgRestorativeImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/dental-services/bg-restorative-dentistry.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/dental-services/bg-restorative-dentistry.jpg);
+    background-position: 50%  10%;
+}
+
+
+.header #headerCosmetic, 
+.header #headerPreventive,
+.header #headerOrthodontics,
+.header #headerPediatric,
+.header #headerPeriodontic,
+.header #headerRestorative {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+.header .bgCosmeticImage,
+.header .bgPreventiveImage,
+.header .bgOrthodonticsImage,
+.header .bgPediatricImage,
+.header .bgPeriodonticImage,
+.header .bgRestorativeImage {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 500px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+/** Header Subtitle ***/
+
+.header .cosmeticTitle,
+.header .preventiveTitle,
+.header .orthodonticsTitle, 
+.header .pediatricTitle, 
+.header .periodonticTitle, 
+.header .restorativeTitle {
+    text-align: center;
+    font-size: 72px;
+    color: #fff;
+    width: 100%;
+    padding: 220px 20px  20px;
+    background-color: transparent;
+}
+
+.header .cosmeticDetails,
+.header .preventiveDetails,
+.header .orthodonticsDetails,
+.header .pediatricDetails,
+.header .periodonticDetails,
+.header .restorativeDetails {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION ****************/
+
+@media only screen and (max-width: 768px) {
+     
+    .header .bgCosmeticImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/small-bg-cosmetic-dentistry.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/small-bg-cosmetic-dentistry.jpg);
+    }
+
+    .header .bgPreventiveImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/small-bg-preventive-dentistry.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/small-bg-preventive-dentistry.jpg);
+    }
+
+    .header .bgOrthodonticsImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/small-bg-orthodontics.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/small-bg-orthodontics.jpg);
+    }
+
+    .header .bgPediatricImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/dental-services/small-bg-pediatric-dentistry.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/dental-services/small-bg-pediatric-dentistry.jpg);
+    }
+
+    .header .bgPeriodonticImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.5))), url(../images/photos/dental-services/small-bg-periodontics.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/dental-services/small-bg-periodontics.jpg);
+    }
+
+    .header .bgRestorativeImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/dental-services/small-bg-restorative-dentistry.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/dental-services/small-bg-restorative-dentistry.jpg);
+    }
+    
+    
+    .header .bgCosmeticImage,
+    .header .bgPreventiveImage,
+    .header .bgOrthodonticsImage,
+    .header .bgPediatricImage,
+    .header .bgPeriodonticImage,
+    .header .bgRestorativeImage {
+        background-attachment: scroll;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .header .cosmeticTitle,
+    .header .preventiveTitle,
+    .header .orthodonticsTitle, 
+    .header .pediatricTitle, 
+    .header .periodonticTitle, 
+    .header .restorativeTitle {
+        font-size: 41px;
+        width: 100%;
+        padding: 230px 10px 10px;
+        }
+
+    .header .cosmeticDetails,
+    .header .preventiveDetails,
+    .header .orthodonticsDetails,
+    .header .pediatricDetails,
+    .header .periodonticDetails,
+    .header .restorativeDetails {
+        font-size: 30px;
+        padding: 0 10px;
+        }
+}
+
+/**************************************************************************************************************************************/
+/***** END: HEADER SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE *****/
+/**************************************************************************************************************************************/
+
+
+
+/****************************************************************************************************************************************/
+/**** START: SERVICE SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE ****/
+/****************************************************************************************************************************************/
+
+.aboutService {
+    margin-top: 505px;
+    margin-bottom: 79px;
+}
+
+.aboutService  .container {
+    padding: 71px   10px   0;
+    text-align: center;
+}
+
+.aboutService div {
+    float: left;
+}
+
+
+.aboutService .cosmeticDentistry,  
+.aboutService .preventiveDentistry,  
+.aboutService .orthodontics,
+.aboutService .pediatricDentistry,
+.aboutService .periodonticDentistry,
+.aboutService .restorativeDentistry {
+   width: 50%;
+   height: auto;
+   padding: 0   10px;
+   line-height: 140%;
+}
+
+.aboutService .cosmeticImage, 
+.aboutService .preventiveImage, 
+.aboutService .orthodonticsImage,
+.aboutService .pediatricImage,
+.aboutService .periodonticImage,
+.aboutService .restorativeImage {
+   padding: 0   10px;
+   width: 50%; 
+}
+
+.aboutService .cosmeticImage img,
+.aboutService .preventiveImage img,
+.aboutService .orthodonticsImage img,
+.aboutService .pediatricImage img,
+.aboutService .periodonticImage img,
+.aboutService .restorativeImage img {
+   width: 100%;
+}
+
+/** About The Service Title **/
+
+.aboutService .cosmeticDentistry  .title,
+.aboutService .preventiveDentistry  .title,
+.aboutService .orthodontics  .title,
+.aboutService .pediatricDentistry  .title,
+.aboutService .periodonticDentistry  .title,
+.aboutService .restorativeDentistry  .title {
+   font-size: 30px;
+}
+
+.aboutService .cosmeticDentistry  .title:after,
+.aboutService .preventiveDentistry  .title:after,
+.aboutService .orthodontics  .title:after,
+.aboutService .pediatricDentistry  .title:after,
+.aboutService .periodonticDentistry  .title:after,
+.aboutService .restorativeDentistry  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2ecc71;
+   margin-top: 16px;
+}
+
+.aboutService .cosmeticDentistry  h2, 
+.aboutService .preventiveDentistry  h2, 
+.aboutService .orthodontics h2,
+.aboutService .pediatricDentistry h2,
+.aboutService .periodonticDentistry h2,
+.aboutService .restorativeDentistry h2 {
+    margin-bottom: 28px; 
+}
+
+/** About The Service Description **/
+
+.aboutService .cosmeticDentistry p,
+.aboutService .preventiveDentistry p,
+.aboutService .orthodontics p,
+.aboutService .pediatricDentistry p,
+.aboutService .periodonticDentistry p,
+.aboutService .restorativeDentistry p  {
+        font-size: 16px;
+    }
+
+
+/*************** MEDIA QUERIES FOR THE ABOUT THE SERVICE SECTION ****************/
+
+@media only screen and (max-width: 750px) {
+    
+     .aboutService  div {
+         float: none;
+     }
+    
+    .aboutService .cosmeticDentistry,
+    .aboutService .preventiveDentistry,
+    .aboutService .orthodontics,
+    .aboutService .pediatricDentistry,
+    .aboutService .periodonticDentistry,
+    .aboutService .restorativeDentistry {
+         text-align: center;
+         width: 100%;
+         margin-bottom: 20px;
+    }
+
+    .aboutService .cosmeticImage, 
+    .aboutService .preventiveImage, 
+    .aboutService .orthodonticsImage, 
+    .aboutService .pediatricImage, 
+    .aboutService .periodonticImage, 
+    .aboutService .restorativeImage {
+      width: 100%; 
+      padding: 0 60px;
+    }
+    
+    .aboutService .cosmeticDentistry  .title:after,
+    .aboutService .preventiveDentistry  .title:after,
+    .aboutService .orthodontics  .title:after,
+    .aboutService .pediatricDentistry  .title:after,
+    .aboutService .periodonticDentistry  .title:after,
+    .aboutService .restorativeDentistry  .title:after {
+       margin: 0 auto;
+       margin-top: 16px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .aboutService .cosmeticImage, 
+    .aboutService .preventiveImage, 
+    .aboutService .orthodonticsImage, 
+    .aboutService .pediatricImage, 
+    .aboutService .periodonticImage, 
+    .aboutService .restorativeImage {
+      width: 100%; 
+      padding: 0 10px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+     .aboutService .cosmeticDentistry  .title,
+     .aboutService .preventiveDentistry  .title,
+     .aboutService .orthodontics  .title,
+     .aboutService .pediatricDentistry  .title,
+     .aboutService .periodonticDentistry  .title,
+     .aboutService .restorativeDentistry  .title {
+       font-size: 25px;
+     }
+
+     .aboutService .cosmeticDentistry  .title:after,
+     .aboutService .preventiveDentistry  .title:after,
+     .aboutService .orthodontics  .title:after,
+     .aboutService .pediatricDentistry  .title:after,
+     .aboutService .periodonticDentistry  .title:after,
+     .aboutService .restorativeDentistry  .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+     }
+}
+
+/****************************************************************************************************************************************/
+/***** END: SERVICE SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE *****/
+/****************************************************************************************************************************************/
+
+
+/***************************************************************************************************************************************/
+/* START: GO TO DENTIST SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE */
+/***************************************************************************************************************************************/
+
+.goToDentist {
+   background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/dental-services/bg-often-visit-the-dentist.jpg);
+   background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/dental-services/bg-often-visit-the-dentist.jpg); 
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: left center;
+   height: 325px;
+   color: #fff;
+   margin-top: 52px;
+}
+
+
+.goToDentist .container p {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding: 115px   10px 100px;
+    width: 60%;
+    margin: 0 auto;
+    line-height: 150%;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE GO THE DENTIST SECTION ****************/
+
+@media only screen and (max-width: 1024px) {
+    .goToDentist .container p {
+     width: 90%;
+   }
+}
+
+
+@media only screen and (max-width: 768px) {
+    
+   .goToDentist .container p {
+     width: 100%;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   
+   .goToDentist .container p {
+     width: 100%;
+     padding: 20%   10px;
+     font-size: 20px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+    .goToDentist .container p {
+     width: 100%;
+     padding: 30%   10px;
+     font-size: 18px;
+   }
+}
+
+/***************************************************************************************************************************************/
+/** END: GO TO DENTIST SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE **/
+/***************************************************************************************************************************************/
+
+
+/****************************************************************************************************************************************/
+/* START: OTHER SERVICES SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE */
+/****************************************************************************************************************************************/
+
+.otherServices .container {
+    padding: 71px   10px   0;
+    text-align: center;
+    margin-bottom: 60px;
+   
+}
+
+
+/** Services Introduction **/
+
+.otherServices .title {
+   font-size: 30px;
+}
+
+.otherServices  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2ecc71;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.otherServices h2  {
+    margin-bottom: 28px;
+}
+
+/** Our Services **/
+
+.ourServices {
+    margin-top: 28px;
+}
+
+.otherServices .col {
+	margin: 0.25%;
+}
+
+/* all browsers except IE6 and lower */
+
+.otherServices ul.ourServices  {
+    list-style-type: none;
+}
+
+.otherServices ul.ourServices img {
+     width: 100%;
+     
+}
+
+/** Images Overlay **/
+
+.otherServices .ourServices a {
+    text-decoration: none;
+}
+
+.otherServices .ourServices p span {
+    font-weight: bold;
+}
+
+.otherServices .ourServices .caption {
+    position: relative;
+}
+
+.otherServices .ourServices .photo_Overlay {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(46, 204, 113, 0.8);
+    padding: 20px  20px;
+    margin: 0 25%;
+    bottom: 34%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 50%;
+    opacity: 0;
+    
+}
+
+.otherServices .ourServices .caption:hover .photo_Overlay {
+    opacity: 1;
+}
+
+
+.otherServices .description p {
+    margin-top: 15px;
+    font-size:  22px;
+    font-weight: bold;
+    text-align: left;
+    color: #000;
+}
+
+/*************** MEDIA QUERIES FOR THE OTHER SERVICES SECTION ****************/
+
+
+@media only screen and (max-width: 800px) {
+    .otherServices .description p {
+        font-size: 18px;
+        margin-top: 0px;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .otherServices .servicesWeOffer {
+        width: 100%;
+    } 
+    
+    .otherServices .ourServices .description p {
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .otherServices .title {
+       font-size: 25px;
+     }
+
+    .otherServices .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .otherServices .description p {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+}
+
+/****************************************************************************************************************************************/
+/** END: OTHER SERVICES SECTION - COSMETIC PAGE, PREVENTIVE PAGE, ORTHODONTIC PAGE, PEDIATRIC PAGE, PERIODONTIC PAGE, RESTORATIVE PAGE **/
+/****************************************************************************************************************************************/
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/********************************************** END: SERVICES PAGE PART 2 *************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/*********************************************** START: CONTACT PAGE ******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+/*************************************************************************/
+/**************** START: HEADER SECTION - CONTACT PAGE *******************/
+/*************************************************************************/
+
+.header .bgContactImage {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/contact/bg-contact-keyson-dental-clinic.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/contact/bg-contact-keyson-dental-clinic.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 2%;
+    height: 500px;
+}
+
+.header #headerContact {
+    z-index: 1;
+	position: relative;
+    height: 500px;
+}
+
+
+.header .bgContactImage {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+
+/***********************************************************************/
+/**************** END: HEADER SECTION - CONTACT PAGE *******************/
+/***********************************************************************/
+
+
+/*************************************************************************/
+/************** START: CONTACT US SECTION - CONTACT PAGE *****************/
+/*************************************************************************/
+
+#contactSection {
+    margin-top: 426px;
+}
+
+.contactUs .container{
+    text-align: center;
+    padding: 71px 10px 0;
+}
+
+.contactUs #container2{
+    padding: 50px 10px 0;
+}
+
+/** Contact US Introduction **/
+
+.contactUs .title  {
+   font-size: 30px;
+}
+
+.contactUs  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2ecc71;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.contactUs h2  {
+    margin-bottom: 28px;
+   
+}
+
+
+.contactUs p {
+    font-size: 16px;
+}
+
+/** Contact Details **/
+
+.contactUs #contact_details {
+    padding: 0  10px;
+    text-align: left;
+}
+
+/** Contact Detail Icons **/
+.contactUs #address {
+    background-image: url(../images/icons/location.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 20px 0 40px 80px;
+}
+
+.contactUs #phoneNumber {
+    background-image: url(../images/icons/telephone.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 15px 0 40px 80px;
+}
+
+.contactUs #writeMail {
+    background-image: url(../images/icons/email.png);
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 15px 0 40px 80px;
+}
+
+
+
+/** Contact FORM **/
+
+.contactUs #contact-form{
+    padding: 0 10px 71px;
+    text-align: left;
+}
+
+.contactUs input[type=text],
+.contactUs input[type=tel],
+.contactUs input[type=email],
+.contactUs textarea {
+    padding: 20px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contactUs input[type=tel],
+.contactUs input[type=email],
+.contactUs textarea {
+    margin-top: 20px;
+}
+
+.contactUs textarea {
+    height: 200px;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #636363;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #636363;
+}
+
+.contactUs input[type=submit] {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2ecc71;
+    padding: 18px;
+    border: 3px solid transparent;
+    width: 150px;
+    margin-top: 20px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.contactUs input[type=submit]:hover {
+   background-color: #fff;
+   color: #319d5e;
+   border: 3px solid #319d5e;
+}
+
+
+/*************** MEDIA QUERIES FOR THE CONTACT SECTION - CONTACT PAGE ****************/
+
+
+@media only screen and (max-width: 768px) {
+    
+    .header .bgContactImage {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.6)),to(rgba(0,0,0,0.6))), url(../images/photos/contact/small-bg-contact-keyson-dental-clinic.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(../images/photos/contact/small-bg-contact-keyson-dental-clinic.jpg);
+    }
+    
+    
+    #contactSection {
+        margin-top: 436px;
+    }
+
+    
+    .contactUs .container{
+        text-align: center;
+    }
+    .contactUs .col {
+        margin: 0;
+    }
+    
+    .contactUs #contact_details {
+        width: 100%;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    /** Contact Detail Icons **/
+    .contactUs #address {
+        background-position: top center;
+        padding: 60px 0 40px;
+    }
+
+    .contactUs #phoneNumber {
+        background-position: top center;
+        padding: 60px 0 40px;
+    }
+
+    .contactUs #writeMail {
+        background-position: top center;
+        padding: 60px 0  40px;
+    }
+    
+    
+    .contactUs #contact-form{
+        width: 100%;
+    }
+    
+    .contactUs input[type=submit] {
+        text-align: center;
+        margin: 20px auto 0;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .contactUs .title {
+       font-size: 25px;
+     }
+
+    .contactUs .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+     width: 100%;
+     margin: 1%  0;
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+     padding: 20px  10px;
+    }
+    .contactUs input[type=submit] {
+     width: auto;
+    }
+   
+}
+
+/*************************************************************************/
+/************** END: CONTACT US SECTION - CONTACT PAGE *******************/
+/*************************************************************************/
+
+
+/*******************************************************************/
+/*************** START: MAP SECTION - CONTACT PAGE *****************/
+/*******************************************************************/
+
+#map {
+    width: 100%;
+    height: 532px;
+    background-color: #2ecc71;
+}
+
+/*********************************************************************/
+/***************** END: MAP SECTION - CONTACT PAGE *******************/
+/*********************************************************************/
+
+
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/************************************************ END: CONTACT PAGE *******************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+/**************************************************************************************************************************/
+
+
+
+
+
+/******************************************************************************/
+/******************* START: Customising The SLICK Plugin  *********************/
+/******************************************************************************/
+
+/******************** Background HEADER and TESTIMONIALS SECTION  **********************/
+
+/** Dots **/
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.slick-dots li.slick-active {
+  background: #fff;
+  cursor: default;
+}
+
+/** Arrows **/
+
+.slick-prev {
+    left: 25px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 25px;
+
+}
+
+/******************** OTHER SERVICES SECTION  **********************/
+
+/** Dots **/
+
+.otherServices .slick-dots {
+    bottom: -40px;
+}
+
+.otherServices .slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 2px solid #319d5e;
+  cursor: pointer;
+}
+.otherServices .slick-dots li.slick-active {
+  background: #319d5e;
+  cursor: default;
+}
+
+@media only screen and (max-width: 510px) {
+   .otherServices .slick-dots {
+      bottom: -20px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+    .otherServices .slick-dots {
+       bottom: -10px;
+    } 
+}
+
+/******************************************************************************/
+/******************** END: Customising The SLICK Plugin  **********************/
+/******************************************************************************/
+
+
+
+
+
+
+/******************************************************************************/
+/***************  START: Customising Magnific Pop Up Plugin  ******************/
+/******************************************************************************/
+
+/******* Zoom effect *******/
+
+/* start state */
+.mfp-zoom-in  .mfp-with-anim {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; 
+    -webkit-transform: scale(0.8); 
+    transform: scale(0.8); 
+}
+  
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+  
+/* animate in */
+
+.mfp-zoom-in.mfp-ready  .mfp-with-anim {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1); 
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+      opacity: 0.8; 
+}
+ 
+/* animate out */
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8); 
+      opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+      opacity: 0;
+}
+    
+ 
+/******************************************************************************/
+/****************  END: Customising Magnific Pop Up Plugin  *******************/
+/******************************************************************************/
+
+
+/*****************************************************************************************/
+/******************* START: Customising The jQuery Validation Plugin *********************/
+/*****************************************************************************************/
+
+
+.contactUs #contact-form  label.error {
+    color: #e74c3c;
+    text-align: left;
+    display: block;
+}
+
+.contactUs #contact-form   input.error, 
+.contactUs #contact-form   textarea.error {
+    border: 2px solid #e74c3c;
+    outline: none;
+}
+
+@media only screen and (max-width: 480px) {
+   .contactUs #contact-form  label.error {
+        margin-bottom: 10px;
+    }
+}
+
+
+/***************************************************************************************/
+/******************* END: Customising The jQuery Validation Plugin *********************/
+/***************************************************************************************/
+
+
+/*******************************************************************/
+/******************* Hidding Elements On Slide *********************/
+/*******************************************************************/
+
+.js-hidden  {
+    visibility: hidden;
+}
+
+/****************************************************************/
+/******************* END: Elements On Slide *********************/
+/****************************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
